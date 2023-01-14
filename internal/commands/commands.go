@@ -3,13 +3,15 @@ package commands
 import (
 	"fmt"
 
-	"github.com/santhoshreddy97/goreddy/internal/app"
+	"github.com/SanthoshReddy97/goreddy/internal/app"
+	"github.com/SanthoshReddy97/goreddy/internal/system"
 	"github.com/spf13/cobra"
 )
 
 const (
-	createApp = "createApp"
-	version   = "version"
+	createApp   = "createApp"
+	version     = "version"
+	startServer = "startServer"
 )
 
 var createAppCmd = &cobra.Command{
@@ -24,4 +26,10 @@ var versionCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("Version 1.0.0")
 	},
+}
+
+var startServerCmd = &cobra.Command{
+	Use:   startServer,
+	Short: "Starts the server",
+	Run:   system.StartHttpServer,
 }

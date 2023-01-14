@@ -3,10 +3,14 @@ package templates
 func Main() []byte {
 	data := []byte(`package main
 
-import "fmt"
+import (
+	"net/http"
+  
+	"github.com/santhoshreddy/goreddy"
+)
 
 func main() {
-	fmt.Println("Hello, World!")
+	goreddy.gin.ExecuteFromCommandLine()
 }
 `)
 	return data

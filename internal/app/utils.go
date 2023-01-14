@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/santhoshreddy97/goreddy/internal/errors"
+	"github.com/SanthoshReddy97/goreddy/internal/errors"
 )
 
 func CreateDirectory(appName string) {

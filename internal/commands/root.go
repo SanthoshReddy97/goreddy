@@ -23,4 +23,5 @@ func Execute() {
 func init() {
 	rootCmd.AddCommand(createAppCmd)
 	rootCmd.AddCommand(versionCmd)
+	rootCmd.AddCommand(startServerCmd)
 }

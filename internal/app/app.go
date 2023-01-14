@@ -3,7 +3,8 @@ package app
 import (
 	"fmt"
 
-	"github.com/santhoshreddy97/goreddy/internal/errors"
+	"github.com/SanthoshReddy97/goreddy/internal/errors"
+	"github.com/SanthoshReddy97/goreddy/internal/gin"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )
@@ -17,6 +18,11 @@ func CreateApp(cmd *cobra.Command, args []string) {
 	appName := args[0]
 	CreateDirectory(appName)
 	InitMod(appName)
+	InstallMainPackages(appName)
 	InitMain(appName)
 	log.Info(fmt.Sprintf("Hola! Created the app successfully!\n\ncd %s\ngo run main.go", appName))
+}
+
+func ExecuteFromCommandLine() {
+	gin.StartHttpServer()
 }
