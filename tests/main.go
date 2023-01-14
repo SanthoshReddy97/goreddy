@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/SanthoshReddy97/goreddy/internal/gin"
+	"github.com/SanthoshReddy97/goreddy/src/gin"
 )
 
 func main() {

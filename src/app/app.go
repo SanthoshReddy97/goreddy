@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/SanthoshReddy97/goreddy/internal/errors"
-	"github.com/SanthoshReddy97/goreddy/internal/gin"
+	"github.com/SanthoshReddy97/goreddy/src/gin"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

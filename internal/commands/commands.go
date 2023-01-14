@@ -3,8 +3,8 @@ package commands
 import (
 	"fmt"
 
-	"github.com/SanthoshReddy97/goreddy/internal/app"
 	"github.com/SanthoshReddy97/goreddy/internal/system"
+	"github.com/SanthoshReddy97/goreddy/src/app"
 	"github.com/spf13/cobra"
 )
 
