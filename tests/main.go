@@ -3,10 +3,10 @@ package main
 import (
 	"fmt"
 
-	"github.com/SanthoshReddy97/goreddy/src/gin"
+	"github.com/SanthoshReddy97/goreddy/internal/httpReddy"
 )
 
 func main() {
 	fmt.Println("tests")
-	gin.StartHttpServer()
+	httpReddy.StartServer()
 }

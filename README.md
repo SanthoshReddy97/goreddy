@@ -18,8 +18,6 @@ mysite/
     mysite/
         settings.go
         urls.go
-        asgi.go
-        wsgi.go
 	app/
 		migrations -> need to check
 		models
