@@ -4,24 +4,24 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-var v1 = &gin.RouterGroup{}
-var router = &gin.Engine{}
+// HandlerFunc defines the handler used by gin middleware as return value.
+type HandlerFunc func(*gin.Context)
+
+type RouteInfo struct {
+	Method      string
+	Path        string
+	Handler     string
+	HandlerFunc HandlerFunc
+}
+
+var URLs []RouteInfo
 
 func StartServer() {
-	router = RouterSetUp()
-	v1 = router.Group("")
-	router.Run()
-}
-
-func RouterSetUp() *gin.Engine {
 	router := gin.Default()
-	return router
-}
-
-func GetGinRouter() *gin.Engine {
-	return router
-}
-
-func GetRouterGroup() *gin.RouterGroup {
-	return v1
+	for _, url := range URLs {
+		if url.Method == "GET" {
+			router.GET(url.Path, gin.HandlerFunc(url.HandlerFunc))
+		}
+	}
+	router.Run()
 }

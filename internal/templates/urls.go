@@ -8,7 +8,7 @@ import (
 )
 
 func Router() {
-	reddy.GinRouter().GET("/", func(c *gin.Context) {
+	reddy.RegisterUrls("/", "GET", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
 			"message": "Hello world",
 		})
